@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import cancion from './assets/a_susurros_suaves.mp3'
+import todoroki from './assets/bakugou.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="player">
+        <img className='player__imagen' src={todoroki} alt="" />
+
+        <audio className='player__audio' controls>
+          <source src={cancion} type='audio/mpeg' />
+        </audio>
+
+        <div className='player__controls'>
+          <button className="play" data-icon="P" aria-label="play pause toggle"></button>
+          <button className="stop" data-icon="S" aria-label="stop"></button>
+          <div className="timer">
+            <div></div>
+            <span aria-label="timer">00:00</span>
+          </div>
+          <button className="rwd" data-icon="B" aria-label="rewind"></button>
+          <button className="fwd" data-icon="F" aria-label="fast forward"></button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
