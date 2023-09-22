@@ -1,0 +1,22 @@
+.player__controls {
+  /* visibility: hidden; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  flex: 5;
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  border-radius: 4px;
+  background-color: rgb(240, 240, 240);
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 8px;
+  z-index: 2;
+}
