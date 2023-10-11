@@ -1,22 +1,35 @@
 .player__controls {
   /* visibility: hidden; */
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: fit-content;
+  display: grid;
+  grid-template-areas:
+    "timer timer timer"
+    "rwd play fwd";
 }
 
 .timer {
-  flex: 5;
-  position: relative;
+  grid-area: timer;
 }
 
 .timer div {
-  position: absolute;
   border-radius: 4px;
   background-color: rgb(240, 240, 240);
-  left: 0;
-  top: 0;
-  width: 50%;
+  width: 75%;
   height: 8px;
   z-index: 2;
+}
+
+.timer span {}
+
+.play {
+  grid-area: play;
+}
+
+.rwd {
+  grid-area: rwd;
+}
+
+.fwd {
+  grid-area: fwd;
 }
