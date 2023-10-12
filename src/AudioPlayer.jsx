@@ -5,7 +5,7 @@ import TrackDisplay from './Components/TrackDisplay'
 import ProgressBar from './Components/ProgressBar.jsx'
 import Controls from './Components/Controls.jsx'
 
-function App() {
+function AudioPlayer() {
   const audioRef = useRef(null);
 
   return (
@@ -21,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default AudioPlayer
