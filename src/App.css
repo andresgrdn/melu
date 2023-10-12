@@ -8,9 +8,3 @@
 .player {
   max-width: 350px;
 }
-
-.player__imagen {
-  width: 100%;
-  object-fit: contain;
-  object-position: center;
-}

@@ -8,20 +8,6 @@
     "rwd play fwd";
 }
 
-.timer {
-  grid-area: timer;
-}
-
-.timer div {
-  border-radius: 4px;
-  background-color: rgb(240, 240, 240);
-  width: 75%;
-  height: 8px;
-  z-index: 2;
-}
-
-.timer span {}
-
 .play {
   grid-area: play;
 }

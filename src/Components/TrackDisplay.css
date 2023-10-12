@@ -1,0 +1,5 @@
+.player__imagen {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
