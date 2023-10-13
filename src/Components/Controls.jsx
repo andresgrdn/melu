@@ -20,6 +20,17 @@ function Controls({ audioRef }) {
     }
   }
 
+  function handleFwd() {
+    let prevTime = audioRef.current.currentTime;
+    let step = 10;
+    audioRef.current.currentTime = prevTime + step;
+  }
+  function handleBwd() {
+    let prevTime = audioRef.current.currentTime;
+    let step = -10;
+    audioRef.current.currentTime = prevTime + step;
+  }
+
   return (
     <div className='player__controls'>
       <button className="play" aria-label="play pause toggle" onClick={handlePlay}>
@@ -28,10 +39,10 @@ function Controls({ audioRef }) {
             <img src={pause_icon} alt="play icon" /> :
             <img src={play_icon} alt="play icon" />}
       </button>
-      <button className="rwd" aria-label="rewind">
+      <button className="rwd" onClick={handleBwd} aria-label="rewind">
         <img src={rwd_icon} alt="play icon" />
       </button>
-      <button className="fwd" aria-label="fast forward">
+      <button className="fwd" onClick={handleFwd} aria-label="fast forward">
         <img src={fwd_icon} alt="play icon" />
       </button>
     </div>
