@@ -13,7 +13,7 @@ function AudioPlayer() {
       <div className="player">
         <TrackDisplay audioRef={audioRef} />
 
-        <ProgressBar />
+        <ProgressBar audioRef={audioRef} />
 
         <Controls audioRef={audioRef} />
       </div>
